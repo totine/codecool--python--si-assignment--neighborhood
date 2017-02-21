@@ -7,6 +7,8 @@ class UI:
     @staticmethod
     def menu_input():
         option = input("Option: ")
+        while not option.isnumeric():
+            option = input("Option (enter number): ")
         return int(option)
 
     @staticmethod

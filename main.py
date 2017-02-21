@@ -59,6 +59,9 @@ def main():
             main_menu.set_is_asking()
         else:
             result = main_menu.exec_function(option)
+            if not result:
+                UI.simple_print("No such option")
+                continue
             UI.simple_print(result)
 
 if __name__ == "__main__":
